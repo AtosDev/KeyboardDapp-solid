@@ -11,9 +11,9 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head />
-        <body className='bg-gradient-to-r from-black  to-white'>
+        <body className='bg-gradient-to-r from-gray-400  to-white'>
           <main className='max-w-3xl mx-auto'>
-            <h1 className='mt-16 mb-4 text-4xl text-white flex justify-start items-end rounded-md'>
+            <h1 className='mt-16 mb-5 text-4xl text-transparent bg-clip-text gradient-btn flex justify-start items-end font-bold'>
               Keyboard Creator Dapp
             </h1>
             <Main />
