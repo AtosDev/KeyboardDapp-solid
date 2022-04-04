@@ -1,13 +1,15 @@
+import { FiTwitter } from "react-icons/fi";
+
 export default function Footer() {
   return (
-    <footer className='mx-auto mt-48 text-center'>
+    <footer className='w-full flex justify-center items-center mt-20 flex-wrap'>
       <a
-        href='https://github.com/MFaiqKha'
+        href='https://twitter.com/MFaiqKhan3'
         target='_blank'
         rel='noopener noreferrer'
-        className="text-black text-lg text-center font-medium mt-2  cursor-pointer"
+        className="text-gray-500 font-medium text-sm text-center  cursor-pointer"
       >
-        MADE BY FAIQ KHAN
+       <p className="w-full flex justify-between m-5 text-lg"> MADE BY <FiTwitter className="text-blue-400  text-center text-4xl"/> @MFaiqKhan3 </p>
       </a>
     </footer>
   )
