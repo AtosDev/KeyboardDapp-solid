@@ -34,6 +34,7 @@ contract Keyboards {
     // event can make our app lively with live notifications and live update so we won't have to refresh the page to see the changes
     // struct variable event
     //  emit an event whenever a user creates a keyboard
+    // this will be handled in frontend by on event handler (etherjs)
     event KeyboardCreated( 
         Keyboard keyboard 
     );
