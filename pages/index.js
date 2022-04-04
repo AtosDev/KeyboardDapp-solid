@@ -10,6 +10,8 @@ import TipBtn from "../components/tipBtn";
 import getKeyboardsContract from "../utils/getKeyboardsContract";
 import { toast } from "react-hot-toast"
 import { useMetaMaskAccount } from "../context/meta-mask-account-provider";
+import AddressBar from "../components/addressBar";
+import {shortenAddress} from "../utils/shortenAddress";
 
 
 const Home = () => {
@@ -206,7 +208,7 @@ const Home = () => {
             Connect to Metamask Wallet
           </PrimaryBtn>
         ) : (
-          <p>Connected Account: {connectedAccount}</p>
+          <AddressBar connectedAccount={shortenAddress(connectedAccount)}/>
         ) // if there is an account connected to the website, then show the connected account address
       }
       {Keyboards.length > 0 ? (
@@ -227,7 +229,7 @@ const Home = () => {
               />
               <span className="absolute top-1 right-6"> {/* absolute is used to make the text to be positioned relative to the parent */}
                 {addressesEqual(owner, connectedAccount) ? // if the owner(addr1) of the keyboard is the same as the connected account(addr2), then show the react icon user button which means we cant tip ourselves
-                  <UserCircleIcon className="h-5 w-5 text-indigo-100" /> : // if the owner(addr1) of the keyboard is not the same as the connected account(addr2), then show the tip button . which will initiate the tipping process to owner of the keyboard
+                  <UserCircleIcon className="h-5 w-5 text-indigo-300" /> : // if the owner(addr1) of the keyboard is not the same as the connected account(addr2), then show the tip button . which will initiate the tipping process to owner of the keyboard
                     <TipBtn keyboardsContract={keyboardsContract} index={i} > {/* // index is the index of the keyboard in the keyboards array */}
                       Tip!
                     </TipBtn> // we are also passing keyboardsContract instance as a prop to this component
